@@ -1,0 +1,307 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Física Mecánica</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;700;800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<main>
+<section class="stage" id="inicio" hidden>
+<header class="top">
+<nav class="shell nav" aria-label="Navegación"><button type="button" class="brand" data-go="inicio"><span class="brand-mark" aria-hidden="true">↗</span> Física Mecánica</button>
+<div class="nav-links"><button type="button" class="nav-link" data-go="inicio" aria-current="page">Inicio</button><button type="button" class="nav-link" data-go="progreso">Progreso</button><button type="button" class="nav-link" data-go="ayuda">Ayuda</button><button type="button" class="nav-link profile-trigger" data-open-profile>Mi perfil</button></div>
+</nav>
+</header>
+<div class="shell home">
+<div class="hero">
+<div class="hero-copy">
+<div class="eyebrow">Física mecánica</div>
+<h1 tabindex="-1">La carta del<br><em>Faro del Horizonte</em></h1><p class="intro">Una niebla espesa ha apagado el faro. Acompaña a Vela, la flecha mensajera, a buscar a Lina por las Islas del Movimiento.</p><a class="button hero-button" href="#modulos">Elegir un capítulo <span aria-hidden="true">↓</span></a></div>
+</div>
+<section class="modules" id="modulos">
+<h2>Elige un capítulo</h2>
+<div class="tiles"><button type="button" class="tile" data-module="vectores"><span class="tile-icon"><svg aria-hidden="true" focusable="false" width="76" height="75" viewBox="0 0 76 75" fill="none" stroke="#000" stroke-width="2.6"><circle cx="9" cy="62" r="7"/><path d="M15 57 L62 22"/><path d="M50 21h13v13" stroke-linecap="round"/></svg></span><span class="tile-title">Vectores</span><span class="tile-desc">I · El mapa bajo la niebla</span><span class="tile-arrow" aria-hidden="true">↗</span></button><button type="button" class="tile" data-module="dinamica"><span class="tile-icon"><svg aria-hidden="true" focusable="false" width="182" height="92" viewBox="0 0 182 92" fill="none" stroke="#000" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"><rect x="58" y="10" width="20" height="72" rx="4"/><rect x="104" y="10" width="20" height="72" rx="4"/><path d="M78 46h26"/><rect x="38" y="22" width="20" height="48" rx="4"/><rect x="124" y="22" width="20" height="48" rx="4"/><path d="M38 40H22M38 52H22M144 40h16M144 52h16"/><rect x="10" y="30" width="12" height="32" rx="4"/><rect x="160" y="30" width="12" height="32" rx="4"/></svg></span><span class="tile-title">Dinámica</span><span class="tile-desc">II · El dique de los ciervos</span><span class="tile-arrow" aria-hidden="true">↗</span></button><button type="button" class="tile" data-module="colisiones"><span class="tile-icon"><svg aria-hidden="true" focusable="false" width="112" height="112" viewBox="0 0 112 112" fill="none" stroke="#000" stroke-width="5" stroke-linejoin="round" stroke-linecap="round"><path d="M6 8h60l4 20 18 4M6 8v96h64l12-8M6 56l24-8 14 14-20 12 18 10M44 62l26-8"/><circle cx="82" cy="62" r="24"/><circle cx="82" cy="62" r="15"/><path d="M98 80l12 20M60 12l12 18M72 6l-6 22" /></svg></span><span class="tile-title">Colisiones</span><span class="tile-desc">III · El puerto de los ecos</span><span class="tile-arrow" aria-hidden="true">↗</span></button></div>
+</section>
+<div class="home-travel">
+  <div class="home-partida">
+    <span class="home-partida-icon" aria-hidden="true">✦</span>
+    <div><strong id="home-profile-title">Tu partida</strong><p id="home-profile-detail"></p></div>
+    <button type="button" class="button" id="home-resume" hidden>Continuar →</button>
+  </div>
+  <div class="resources"><button type="button" class="button secondary" data-go="formulas">Glosario <span aria-hidden="true">↗</span></button><button type="button" class="button secondary" data-go="ejercicios">Ejercicios de práctica <span aria-hidden="true">↗</span></button><button type="button" class="nav-link" data-go="ayuda">¿Cómo funciona?</button></div>
+</div>
+</div>
+</section>
+<section class="stage" id="niveles" hidden>
+<header class="top">
+<nav class="shell nav" aria-label="Navegación">
+<div class="nav-links"><button type="button" class="nav-link" data-back>← Volver</button><span class="crumb"><span class="mod-name">Vectores</span> · Práctica</span></div><span class="score module-score">★ 0 estrellas</span>
+</nav>
+</header>
+<div class="shell world-page">
+  <div class="world-heading">
+    <div>
+      <p class="world-kicker">Mapa de <span class="mod-name">Vectores</span></p>
+      <h1 tabindex="-1">Islas del Movimiento</h1>
+    </div>
+    <p class="world-help" id="world-help">Toca un nivel para explorarlo. Con el teclado, usa las flechas para seguir el camino.</p>
+  </div>
+  <div class="chapter-banner">
+  <p id="map-chapter-number" class="world-kicker"></p>
+  <h2 id="map-chapter-title"></h2>
+  <p id="map-chapter-story"></p>
+  <details class="chapter-details"><summary>Leer la historia</summary><p id="map-chapter-opening"></p>
+  <p id="map-chapter-relic" class="chapter-relic" hidden></p></details>
+</div>
+  <div class="world-frame">
+    <div class="map-scroll" role="region" aria-label="Mapa de niveles" aria-describedby="world-help">
+      <div class="map">
+        <svg id="edges" viewBox="0 0 1000 580" fill="none" aria-hidden="true"></svg>
+        <div id="nodes"></div>
+        <div class="world-token" aria-hidden="true"><span>⚡</span></div>
+      </div>
+    </div>
+    <div class="world-console">
+      <div class="world-detail" aria-live="polite" aria-atomic="true">
+        <p class="world-status" id="world-status">Nivel 1 · Disponible</p>
+        <h2 id="world-title">Punto de partida</h2>
+        <p id="world-description">Elige una parada para leer su misión.</p>
+      </div>
+      <div class="world-actions">
+        <button class="world-return" type="button" id="world-return" hidden>↶ Volver al inicio del mapa</button>
+        <button class="button world-launch" type="button" id="world-launch" data-go="leccion">Jugar nivel  →</button>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+<section class="stage" id="leccion" hidden>
+<header class="top">
+<nav class="shell nav" aria-label="Navegación">
+<div class="nav-links"><button type="button" class="nav-link" data-back>← Volver</button><span class="crumb">Vectores</span></div><span class="score module-score">★ 0 estrellas</span>
+</nav>
+</header>
+<div class="shell page island-page">
+  <div class="island-masthead" style="--island-scene: var(--chapter-scene)">
+    <p class="island-kicker" id="lesson-place"></p>
+    <h1 id="mission-title" tabindex="-1"></h1>
+  </div>
+  <div class="split island-split">
+    <div class="stack">
+      <article class="panel scene-panel">
+        <h2>La historia hasta aquí</h2>
+        <p id="mission-brief"></p>
+      </article>
+      <article class="panel">
+        <h2>Ensayo antes de partir</h2>
+        <figure class="island-figure">
+          <canvas id="lesson-graph" role="img" aria-label="Dibujo del ensayo"></canvas>
+          <figcaption id="lesson-example"></figcaption>
+        </figure>
+      </article>
+    </div>
+    <div class="stack">
+      <article class="panel">
+        <h2>La pista del camino</h2>
+        <ol id="lesson-steps" class="island-steps"></ol>
+      </article>
+      <details class="panel island-glossary" open>
+  <summary>Glosario de esta parada</summary><dl id="lesson-glossary"></dl>
+</details>
+      <button type="button" class="button" id="goPractice">Jugar la misión →</button>
+    </div>
+  </div>
+</div>
+</section>
+<section class="stage" id="ejercicio" hidden>
+<header class="top">
+<nav class="shell nav" aria-label="Navegación"><span class="crumb"><span class="mod-name">Vectores</span> · <span class="level-number">Nivel 1</span></span><button type="button" class="nav-link" data-go="niveles">× Cerrar</button>
+</nav>
+</header>
+<div class="shell page island-page">
+  <div class="island-masthead" style="--island-scene: var(--chapter-scene)">
+    <p class="island-kicker" id="challenge-place"></p>
+    <h1 id="challenge-title" tabindex="-1"></h1>
+  </div>
+  <div class="split island-split">
+    <div class="stack">
+      <article class="panel scene-panel">
+        <h2>La señal de Vela</h2>
+        <p id="challenge-story"></p>
+        <p id="challenge-situation"></p>
+        <figure class="island-figure">
+          <canvas id="challenge-graph" role="img" aria-label="Dibujo de la misión"></canvas>
+          <figcaption id="challenge-caption"></figcaption>
+        </figure>
+      </article>
+      <details class="panel island-glossary">
+  <summary>Glosario de esta parada</summary><dl id="challenge-glossary"></dl>
+</details>
+    </div>
+    <form class="panel questions" id="challenge-form" novalidate>
+      <div class="mission-label"><h2>Misión principal</h2><span class="bonus-weight" id="base-reward"></span></div>
+      <p id="challenge-question"></p>
+      <label for="ans1">Tu respuesta</label>
+<input class="inp" id="ans1" inputmode="decimal" autocomplete="off" aria-describedby="ans1-feedback">
+<div role="status" id="ans1-feedback" class="answer-feedback" hidden></div>
+      <details class="side-quest" id="scout-quest">
+        <summary><span id="scout-title"></span><span class="bonus-weight">+1 ★</span></summary>
+        <p id="scout-question"></p>
+        <label for="ans-scout">Tu respuesta</label>
+<input class="inp" id="ans-scout" inputmode="decimal" autocomplete="off" aria-describedby="ans-scout-feedback">
+<div role="status" id="ans-scout-feedback" class="answer-feedback" hidden></div>
+      </details>
+      <details class="side-quest" id="bonus-quest">
+        <summary><span id="bonus-title"></span><span class="bonus-weight">+2 ★</span></summary>
+        <p id="bonus-question"></p>
+        <label for="ans2">Tu respuesta</label>
+<input class="inp" id="ans2" inputmode="decimal" autocomplete="off" aria-describedby="ans2-feedback">
+<div role="status" id="ans2-feedback" class="answer-feedback" hidden></div>
+      </details>
+      <div class="answer-actions">
+        <button type="submit" class="button" id="finish">Comprobar respuestas →</button>
+        <button type="button" class="button secondary" id="skip-bonus" hidden>Finalizar con lo que ya acerté</button>
+      </div>
+    </form>
+  </div>
+</div>
+</section>
+<section class="stage" id="resultado" hidden>
+<header class="top">
+<nav class="shell nav" aria-label="Navegación"><span class="crumb"><span class="mod-name">Vectores</span> · <span class="level-number">Nivel 1</span></span><button type="button" class="nav-link" data-go="niveles">× Cerrar</button>
+</nav>
+</header>
+<div class="shell page narrow">
+<article class="panel result">
+<div class="island-masthead result-crest"><div class="reward" id="result-earned"></div>
+<h1 tabindex="-1">¡Nivel completado!</h1></div><p class="intro" id="result-summary"></p>
+<div class="panel tinted story-ending">
+  <h2>Lo que pasa después</h2><p id="result-story"></p>
+</div>
+<div class="equation tinted" id="result-equation"></div>
+<div class="result-checks">
+<h2>Objetivos del nivel</h2><ul class="checks" id="result-objectives"></ul>
+</div>
+<div class="actions"><button type="button" class="button secondary" data-go="ejercicio">Reintentar</button><button type="button" class="button" data-go="niveles">Volver al mapa →</button></div>
+</article></div>
+</section>
+<section class="stage" id="progreso" hidden>
+<header class="top">
+<nav class="shell nav" aria-label="Navegación"><button type="button" class="brand" data-go="inicio"><span class="brand-mark" aria-hidden="true">↗</span> Física Mecánica</button>
+<div class="nav-links"><button type="button" class="nav-link" data-go="inicio">Inicio</button><button type="button" class="nav-link" data-go="progreso" aria-current="page">Progreso</button><button type="button" class="nav-link" data-go="ayuda">Ayuda</button><button type="button" class="nav-link profile-trigger" data-open-profile>Mi perfil</button></div>
+</nav>
+</header>
+<div class="shell page narrow">
+<div class="island-masthead"><h1 tabindex="-1">Tu progreso</h1></div>
+<p class="intro" id="progress-save-note">Tu avance se guarda en este navegador.</p>
+<div class="stats">
+<div class="panel tinted"><strong id="progress-stars">0 ★</strong><p>Estrellas totales</p></div>
+<div class="panel tinted"><strong id="progress-modules">0 / 3</strong><p>Temas con niveles completados</p></div>
+<div class="panel tinted"><strong id="progress-levels">0</strong><p>Niveles completados</p></div>
+</div>
+<div class="stack" id="progress-breakdown"></div>
+<aside class="panel tinted campaign-journal" id="campaign-journal">
+  <h2>El cuaderno de Vela</h2><ul id="campaign-relics"></ul>
+  <p id="campaign-ending" hidden>Vela reunió la aguja, la manivela y la campana. Lina ha encendido el faro y las tres islas vuelven a verse unas a otras.</p>
+</aside></div>
+</section>
+<section class="stage" id="formulas" hidden>
+<header class="top">
+<nav class="shell nav" aria-label="Navegación"><button type="button" class="nav-link" data-back>← Atrás</button>
+</nav>
+</header>
+<div class="shell page narrow">
+<div class="island-masthead"><h1 tabindex="-1">Glosario de las islas</h1></div><p class="intro">Encuentra los nombres que usan Vela y sus amigos y cómo se llaman en física.</p>
+<div class="stack formula-list panel island-glossary"><dl id="full-glossary"></dl></div></div>
+</section>
+<section class="stage" id="ejercicios" hidden>
+<header class="top">
+<nav class="shell nav" aria-label="Navegación"><button type="button" class="nav-link" data-back>← Atrás</button>
+</nav>
+</header>
+<div class="shell page">
+  <div class="island-masthead practice-masthead">
+    <h1 tabindex="-1">Ejercicios de práctica</h1>
+    <p>Resuelve problemas de física con unidades reales. Puedes comprobar tu respuesta y consultar el desarrollo.</p>
+  </div>
+  <div class="practice-filters" role="group" aria-label="Temas de práctica">
+    <button type="button" data-practice-topic="vectores" aria-pressed="true">Vectores</button>
+    <button type="button" data-practice-topic="dinamica" aria-pressed="false">Dinámica</button>
+    <button type="button" data-practice-topic="colisiones" aria-pressed="false">Colisiones</button>
+  </div>
+  <div class="practice-layout">
+    <div class="panel practice-sidebar">
+      <h2>Problemas</h2>
+      <p id="practice-count"></p>
+      <ul class="practice-list" id="practice-list"></ul>
+    </div>
+    <article class="panel practice-card">
+      <p class="island-kicker" id="practice-tag"></p>
+      <h2 id="practice-title" tabindex="-1"></h2>
+      <p id="practice-text"></p>
+      <form class="practice-form" id="practice-form" novalidate>
+        <label id="practice-answer-label" for="practice-answer">Respuesta</label>
+        <div class="practice-input-row">
+          <div class="practice-input">
+            <input class="inp" id="practice-answer" inputmode="decimal" autocomplete="off" aria-describedby="practice-feedback">
+            <span id="practice-unit" aria-hidden="true"></span>
+          </div>
+          <button type="submit" class="button">Comprobar</button>
+        </div>
+        <p class="answer-feedback" id="practice-feedback" role="status" hidden></p>
+      </form>
+      <details class="side-quest" id="practice-solution">
+        <summary>Ver desarrollo</summary>
+        <ol id="practice-steps" class="island-steps"></ol>
+      </details>
+    </article>
+  </div>
+</div>
+</section>
+<section class="stage" id="ayuda" hidden>
+<header class="top">
+<nav class="shell nav" aria-label="Navegación"><button type="button" class="brand" data-go="inicio"><span class="brand-mark" aria-hidden="true">↗</span> Física Mecánica</button>
+<div class="nav-links"><button type="button" class="nav-link" data-go="inicio">Inicio</button><button type="button" class="nav-link" data-go="progreso">Progreso</button><button type="button" class="nav-link" data-go="ayuda" aria-current="page">Ayuda</button></div>
+</nav>
+</header>
+<div class="shell page narrow">
+<div class="island-masthead"><h1 tabindex="-1">¿Cómo funciona?</h1></div><p class="intro">Elige un capítulo y una parada del mapa. Lee la escena, practica con el dibujo y prueba la misión. Los dos desvíos de cada misión son opcionales y puedes volver a buscarlos luego. Suma estrellas dentro de cada tema para abrir más niveles. Cada objetivo da estrellas una sola vez. Si una respuesta no coincide, puedes usar la pista y volver a intentarlo.</p></div>
+</section>
+</main>
+<dialog id="profile-dialog" class="profile-dialog" aria-labelledby="profile-title">
+  <div class="profile-heading">
+    <p class="world-kicker">Islas del Movimiento</p>
+    <h2 id="profile-title">¿Quién juega hoy?</h2>
+  </div>
+  <div class="profile-body">
+    <div id="saved-profiles" hidden>
+      <p>Continuar con un perfil</p>
+      <div class="profile-choices" id="profile-choices"></div>
+    </div>
+    <form id="profile-form">
+      <label for="profile-name">Nombre de jugador</label>
+      <div class="profile-entry">
+        <input class="inp" id="profile-name" autocomplete="off" minlength="2" maxlength="32" required placeholder="Escribe tu nombre">
+        <button type="submit" class="button">Entrar →</button>
+      </div>
+      <label class="profile-import" id="profile-import-row" hidden><input type="checkbox" id="profile-import"> Vincular a este perfil mi partida anterior.</label>
+      <p id="profile-note"></p>
+    </form>
+    <div class="profile-actions">
+      <button type="button" class="nav-link" id="profile-logout" hidden>Cerrar sesión</button>
+      <button type="button" class="nav-link" id="profile-close" hidden>Volver</button>
+    </div>
+  </div>
+</dialog>
+<script src="perfiles.js"></script>
+<script src="aventura.js"></script>
+<script src="diagramas.js"></script>
+<script src="app.js"></script>
+<script src="practica.js"></script>
+</body>
+</html>
